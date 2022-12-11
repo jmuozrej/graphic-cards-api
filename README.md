@@ -1,11 +1,11 @@
-First, the necessary dependencies are installed
+The development is installed in docker
 
-### `npm install`
+To create docker image, it is necessary to execute the following command
 
-If there are any errors, the development environment is restarted
+### `docker build -t graphic-cards-api .`
 
-Finally, the application is deployed
+Finally, to run docker image, run the following command
 
-### `npm start`
+### `docker run -p 8080:8080 graphic-cards-api`
 
-This application is deployed in 8080 port
+This api is deployed in 8080 port
