@@ -108,6 +108,13 @@ app.get('/graphics-cards', function(req, res) {
   res.json(graphics)   
 })
 
+app.get('/graphics-cards/search', function(req, res) {
+    str = req.query.querySearch.toLowerCase()
+    graphicsSearch = graphics.filter((item) => item.name.toLowerCase().includes(str))
+    graphicsSearch = graphicsSearch.concat(graphics.filter((item) => item.model.toLowerCase().includes(str)))
+    res.json(graphicsSearch)
+})
+
 
 app.listen(port)
 console.log('API listening on port ' + port)
