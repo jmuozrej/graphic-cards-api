@@ -104,7 +104,7 @@ const graphics = [
     }
 ]
 
-app.get('/graphics', function(req, res) {
+app.get('/graphics-cards', function(req, res) {
   res.json(graphics)   
 })
 
